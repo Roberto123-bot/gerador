@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador Lotofácil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 class="titulo">Gerador de Jogos</h1>
+  <h2>Escolha de 16 a 23 números</h2>
+  <div id="painel-numerico"></div>
+
+  <p>Dezenas selecionadas: <span id="quantidade">0</span></p>
+
+  <div class="botoes">
+    <button onclick="sortearJogos()">✅Sortear</button>
+    <button onclick="reiniciar()">❌Reiniciar</button>
+    <button onclick="copiarJogos()">📑Copiar</button>
+    <button onclick="baixarComoTxt()">📂Exportar .txt</button>
+  </div>
+
+  <div class="controle">
+    <label>Dezenas por jogo:</label>
+    <div class="controle-slider">
+      <button onclick="ajustarSlider('qtdDezenas', -1)">-</button>
+      <span id="valorDezenas">15</span>
+      <button onclick="ajustarSlider('qtdDezenas', 1)">+</button>
+    </div>
+    <input type="range" id="qtdDezenas" min="15" max="23" value="15">
+  </div>
+
+  <div class="controle">
+    <label>Quantidade de jogos:</label>
+    <div class="controle-slider">
+      <button onclick="ajustarSlider('quantidadeJogos', -1)">-</button>
+      <span id="valorJogos">1</span>
+      <button onclick="ajustarSlider('quantidadeJogos', 1)">+</button>
+    </div>
+    <input type="range" id="quantidadeJogos" min="1" max="1000" value="1">
+  </div>
+
+
+  <h3>Jogos Gerados:</h3>
+  <textarea id="resultado" rows="15" cols="50" readonly></textarea>
+
+  <script src="script.js"></script>
+
+  <footer class="rodape">
+  <p>Desenvolvido por <strong>Roberto Consultor</strong></p>
+  <div class="social">
+    <a href="https://instagram.com/roberto.loterias" target="_blank" aria-label="Instagram">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+    </a>
+    <a href="https://wa.me/5521988957230" target="_blank" aria-label="WhatsApp">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>

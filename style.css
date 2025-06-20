@@ -1,0 +1,170 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+  margin: 0;
+  background: #fff;
+}
+
+/* Painel de números com grid flexível */
+#painel-numerico {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 10px;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+/* Botões de número */
+.numero {
+  width: 100%;
+  aspect-ratio: 1;
+  font-size: 16px;
+  background: #952C7C;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #aaa;
+}
+
+.numero.selecionado {
+  background: #00c853;
+  color: #000000;
+}
+
+/* Container dos botões */
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+/* Inputs e textarea */
+input[type="number"], textarea {
+  width: 90%;
+  max-width: 400px;
+  margin: 10px auto;
+  font-size: 16px;
+  padding: 8px;
+  display: block;
+}
+
+textarea {
+  height: 250px;
+  resize: vertical;
+}
+
+.controle {
+  margin: 25px auto;
+  max-width: 400px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.controle label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.controle-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.controle-slider span {
+  min-width: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4A148C;
+}
+
+.controle-slider button {
+  background-color: #6200ea;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.controle-slider button:hover {
+  background-color: #3700b3;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #00c853; /* verde do tema */
+  height: 6px;
+  border-radius: 5px;
+  background: #e0e0e0;
+}
+
+.rodape {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+  border-top: 2px solid #952C7C;
+}
+
+.rodape strong {
+  color: #952C7C;
+}
+
+.rodape .social {
+  margin-top: 10px;
+}
+
+.rodape .social a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.rodape .social img {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
+  transition: transform 0.2s ease;
+}
+
+.rodape .social img:hover {
+  transform: scale(1.1);
+}
+
+
+/* Responsividade com media query */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  .numero {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
