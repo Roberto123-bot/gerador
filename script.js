@@ -21,7 +21,7 @@ function toggleNumero(numero, botao) {
     botao.classList.remove('selecionado');
   } else {
     if (selecionados.length >= 23) {
-      alert("Você só pode escolher no máximo 23 números.");
+      alert("Você só pode escolher no máximo 25 números.");
       return;
     }
     selecionados.push(numero);
@@ -53,7 +53,7 @@ function sortearJogos() {
   for (let i = 1; i <= qtdJogos; i++) {
     const jogo = sortearJogoBaseadoNosSelecionados(dezenasPorJogo);
     const linha = jogo.map(n => n.toString().padStart(2, '0')).join(" ");
-    saida += `Jogo ${i}: ${linha}\n`;
+    saida += `${linha}\n`;
   }
 
   resultado.value = saida;
@@ -125,4 +125,15 @@ function ajustarSlider(id, valor) {
   input.value = novoValor;
   input.dispatchEvent(new Event('input'));
 }
+
+function selecionarTodas() {
+  selecionados = [];
+  painel.querySelectorAll('.numero').forEach((btn, index) => {
+    const numero = index + 1;
+    selecionados.push(numero);
+    btn.classList.add('selecionado');
+  });
+  atualizarResumo();
+}
+
 
