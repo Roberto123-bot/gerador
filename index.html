@@ -9,7 +9,7 @@
 <body>
 
   <h1 class="titulo">Gerador de Jogos</h1>
-  <h2>Escolha de 16 a 23 números</h2>
+  <h2>Escolha de 16 a 25 números</h2>
   <div id="painel-numerico"></div>
 
   <p>Dezenas selecionadas: <span id="quantidade">0</span></p>
@@ -19,6 +19,7 @@
     <button onclick="reiniciar()">❌Reiniciar</button>
     <button onclick="copiarJogos()">📑Copiar</button>
     <button onclick="baixarComoTxt()">📂Exportar .txt</button>
+    <button onclick="selecionarTodas()">🚀Selecionar todas</button>
   </div>
 
   <div class="controle">
@@ -28,7 +29,7 @@
       <span id="valorDezenas">15</span>
       <button onclick="ajustarSlider('qtdDezenas', 1)">+</button>
     </div>
-    <input type="range" id="qtdDezenas" min="15" max="23" value="15">
+    <input type="range" id="qtdDezenas" min="15" max="25" value="15">
   </div>
 
   <div class="controle">
